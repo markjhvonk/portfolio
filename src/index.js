@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/index.scss';
+import './assets/scss/index.scss';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -9,7 +9,7 @@ import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger'
 import ReduxPromise from 'redux-promise';
 
-import App from './components/App';
+import App from './App';
 import reducers from './redux/reducers';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise, logger)(createStore);
