@@ -1,0 +1,8 @@
+.menu {
+    display: inline-block;
+    position: fixed;
+    z-index: 100;
+    width: $menu-width;
+    height: 100vh;
+    background-color: $color-black-light;
+}

@@ -1,11 +1,15 @@
 import React from 'react';
-import logo from '../assets/images/logo.svg';
 import ApiTest from '../components/ApiTest';
+import Menu from '../components/Menu';
+import Grid from '../components/Grid';
+import TopBar from '../components/TopBar';
 
 function Default() {
     return (
         <div className="Main">
-            <ApiTest />
+            <Menu />
+            <TopBar/>
+            <Grid />
         </div>
     );
 }
