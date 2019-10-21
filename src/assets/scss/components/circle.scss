@@ -1,0 +1,14 @@
+.circle {
+    width: 100%;
+
+    &__svg {
+        // width: 200px;
+    }
+
+    &__path {
+        // width: 200px;
+        transition: stroke-dasharray 2s ease;
+        transform: rotate(-90deg);
+        transform-origin: center;
+    }
+}

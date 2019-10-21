@@ -6,16 +6,24 @@ class Grid extends Component {
     }
 
     render() {
+        const {
+            sectionA,
+            sectionB,
+            sectionC,
+            sectionD,
+            sectionE,
+            sectionF
+        } = this.props;
 
         return (
             <div className="grid__container">
                 <div className="grid">
-                    <div className="grid__section-A">A</div>
-                    <div className="grid__section-B">B</div>
-                    <div className="grid__section-C">C</div>
-                    <div className="grid__section-D">D</div>
-                    <div className="grid__section-E">E</div>
-                    <div className="grid__section-F">F</div>
+                    <div className="grid__section-A">{sectionA}</div>
+                    <div className="grid__section-B">{sectionB}</div>
+                    <div className="grid__section-C">{sectionC}</div>
+                    <div className="grid__section-D">{sectionD}</div>
+                    <div className="grid__section-E">{sectionE}</div>
+                    <div className="grid__section-F">{sectionF}</div>
                 </div>
             </div>
         )
