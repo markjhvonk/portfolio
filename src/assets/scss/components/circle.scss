@@ -1,14 +1,23 @@
 .circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
     width: 100%;
 
-    &__svg {
-        // width: 200px;
+    &__value {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        font-weight: 600;
     }
 
     &__path {
-        // width: 200px;
         transition: stroke-dasharray 2s ease;
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
         transform-origin: center;
+        // box-shadow: $glow-blue;
+        filter: drop-shadow( $glow-blue);
     }
 }

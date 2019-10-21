@@ -6,34 +6,39 @@ class Card extends Component {
     }
 
     render() {
-        const { value } = this.props;
+        const { value, width, height } = this.props;
 
         const progressValue = value + ", 100";
 
         return (
             <div className="circle">
-                <svg 
+                <span className="circle__value">8263</span>
+                <svg
                     class="circle__svg"
-                    viewbox="0 0 50 50"
-                    width="200"
-                    height="200">
-                    <circle
-                        stroke="#efefef"
-                        stroke-width="5"
-                        fill="none"
-                        cx="20"
-                        cy="20"
-                        r="16"/>
+                    viewBox="0 0 33.83098862 33.83098862"
+                    width={width}
+                    height={height}>
+                    {/* <filter id="dropshadow" height="130%">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
+                        <feOffset dx="0" dy="0" result="offsetblur"/>
+                        <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.5"/>
+                        </feComponentTransfer>
+                        <feMerge> 
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter> */}
                     <circle
                         class="circle__path"
                         stroke="#00acc1"
-                        stroke-width="5"
+                        stroke-width="1"
                         fill="none"
-                        stroke-dasharray={progressValue} 
+                        stroke-dasharray={progressValue}
                         stroke-linecap="block"
-                        cx="20"
-                        cy="20"
-                        r="16"/>
+                        cx="16.91549431"
+                        cy="16.91549431"
+                        r="15.91549431" />
                 </svg>
             </div>
         )

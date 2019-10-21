@@ -19,6 +19,15 @@
         padding-top: $top-bar-height;
     }
 
+    &__section-A,
+    &__section-B,
+    &__section-C,
+    &__section-D,
+    &__section-E,
+    &__section-F {
+        position: relative;
+    }
+
     &__section-A {grid-area: A;}
     &__section-B {grid-area: B;}
     &__section-C {grid-area: C;}

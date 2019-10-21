@@ -1,0 +1,29 @@
+.plant {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    margin-right: -20px;
+    
+    
+    &__image {
+        width: 300px;
+        position: absolute;
+        bottom: -25px;
+        right: -70px;
+        z-index: 200;
+        transform-style: preserve-3d;
+    }
+
+    &__value {
+        display: flex;
+        // justify-content: center;
+        align-item: center;
+        font-size: 24px;
+        font-weight: 600;
+
+        span {
+            margin-left: 15px;
+        }
+    }
+}

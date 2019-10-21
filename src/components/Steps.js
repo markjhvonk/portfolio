@@ -14,7 +14,7 @@ class Steps extends Component {
             <Card title="Steps" info="Test">
                 <div className="steps">
                     <h3>Friday</h3>
-                    <Circle value={40}/>
+                    <Circle width={`70%`} height={`100%`} value={40} />
                 </div>
             </Card>
         )
