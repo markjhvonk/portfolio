@@ -80,6 +80,7 @@ class GitFeed extends Component {
                             <small>2019-08-16T21:46:27Z</small>
                         </div>
                     </div>
+                    <div className="git__spacer"></div>
                 </div>
             </Card>
         )

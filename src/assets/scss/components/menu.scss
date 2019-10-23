@@ -1,8 +1,23 @@
 .menu {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     position: fixed;
     z-index: 100;
     width: $menu-width;
     height: 100vh;
     background-color: $color-black-light;
+    box-shadow: $shadow-menu;
+
+    &__logo {
+        margin: 35px 0;
+    }
+
+    &__item {
+        width: 45px;
+        height: 45px;
+        margin: 35px 0;
+        cursor: pointer;
+    }
 }
