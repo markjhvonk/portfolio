@@ -28,7 +28,7 @@ class Default extends Component {
     }
 
     render() {
-        const { weather, plant } = this.props;
+        const { weather, plant, github } = this.props;
 
         return (
             <div className="main">
@@ -47,7 +47,7 @@ class Default extends Component {
                         </div>
                     }
                     sectionB={<Steps />}
-                    sectionC={<GitFeed />}
+                    sectionC={<GitFeed githubData={github} />}
                     sectionD={
                         <WorkContainer title="Work" />}
                     sectionE={<Plant data={plant} />}

@@ -37,10 +37,14 @@
         justify-content: center;
         flex-direction: column;
         font-size: 13px;
+        padding-right: 10px;
+        overflow: hidden;
 
         span {
             width: 100%;
             text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
         small {
