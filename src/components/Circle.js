@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 class Card extends Component {
     render() {
-        const { value, width, height } = this.props;
+        const { percent, width, height, value } = this.props;
 
-        const progressValue = value + ", 100";
+        const progressPercent = percent + ", 100";
 
         return (
             <div className="circle">
-                <span className="circle__value">8263</span>
+                <span className="circle__value">{value}</span>
                 <svg
                     className="circle__svg"
                     viewBox="0 0 33.83098862 33.83098862"
@@ -19,7 +19,7 @@ class Card extends Component {
                         stroke="#00acc1"
                         strokeWidth="1"
                         fill="none"
-                        strokeDasharray={progressValue}
+                        strokeDasharray={progressPercent}
                         strokeLinecap="block"
                         cx="16.91549431"
                         cy="16.91549431"

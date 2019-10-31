@@ -3,6 +3,7 @@ import IconCloud from '../assets/icons/weather/icon-cloud.svg';
 import IconRainLight from '../assets/icons/weather/icon-rain-light.svg';
 import IconRain from '../assets/icons/weather/icon-rain.svg';
 import IconSun from '../assets/icons/weather/icon-sun.svg';
+import IconMoon from '../assets/icons/weather/icon-moon.svg';
 import IconThunder from '../assets/icons/weather/icon-thunder.svg';
 
 class Weather extends Component {
@@ -21,7 +22,12 @@ class Weather extends Component {
                 return IconRain
                 break;
             case 'Clear':
-                return IconSun
+                const timeOfDay = new Date().getHours();
+                if (timeOfDay >= 8 && timeOfDay <= 18) {
+                    return IconSun
+                } else {
+                    return IconMoon
+                }
                 break;
             case 'Clouds':
                 return IconCloud
