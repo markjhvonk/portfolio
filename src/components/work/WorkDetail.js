@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import XIcon from '../../assets/icons/icon-x.svg';
 
 class WorkDetail extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { title, text, images, toggleModal } = this.props;
 
@@ -15,13 +11,13 @@ class WorkDetail extends Component {
                     <div className="work-detail__images">
                         <div className="work-detail__slider">
                             <div className="work-detail__slide">
-                                <img src={images}></img>
+                                <img src={images} alt="slider" />
                             </div>
                         </div>
                     </div>
                     <div className="work-detail__content">
                         <div className="work-detail__close-btn" onClick={toggleModal}>
-                            <img src={XIcon} />
+                            <img src={XIcon} alt="close icon"/>
                         </div>
                         <h2>
                             {title}

@@ -3,13 +3,7 @@ import Card from './Card';
 import Circle from './Circle';
 
 class Steps extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        const { } = this.props;
-
         return (
             <Card title="Steps" info="Test">
                 <div className="steps">

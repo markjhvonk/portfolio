@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import InfoIcon from '../assets/icons/icon-info.svg';
 
 class Card extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { title, info } = this.props;
 
@@ -15,7 +11,7 @@ class Card extends Component {
                     <h2 className="card__title">{title}</h2>
                     {info &&
                         <div className="card__info-button">
-                            <img src={InfoIcon} />
+                            <img src={InfoIcon} alt="card" />
                         </div>
                     }
                 </div>

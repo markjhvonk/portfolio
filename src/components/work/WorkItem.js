@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class WorkItem extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { title, snippet, image } = this.props;
 
@@ -12,7 +8,7 @@ class WorkItem extends Component {
             <div className="work-item" onClick={this.props.onClick}>
                 <div className="work-item__container">
                     <div className="work-item__image">
-                        <img src={image} />
+                        <img src={image} alt="work item" />
                     </div>
                     <div className="work-item__content">
                         <h2>{title}</h2>

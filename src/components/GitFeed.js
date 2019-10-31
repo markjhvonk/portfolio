@@ -4,19 +4,13 @@ import gitlabIcon from '../assets/icons/gitlab-icon.svg'
 import Card from './Card';
 
 class GitFeed extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        const { } = this.props;
-
         return (
             <Card title="Git feed" info="Test">
                 <div className="git">
                     <div className="git__item">
                         <div className="git__icon">
-                            <img src={githubIcon} />
+                            <img src={githubIcon} alt="github icon" />
                         </div>
                         <div className="git__content">
                             <b>Pushed to</b>
@@ -27,7 +21,7 @@ class GitFeed extends Component {
                     </div>
                     <div className="git__item">
                         <div className="git__icon">
-                            <img src={gitlabIcon} />
+                            <img src={gitlabIcon} alt="gitlab icon" />
                         </div>
                         <div className="git__content">
                             <b>Pushed to</b>
@@ -38,7 +32,7 @@ class GitFeed extends Component {
                     </div>
                     <div className="git__item">
                         <div className="git__icon">
-                            <img src={githubIcon} />
+                            <img src={githubIcon} alt="github icon" />
                         </div>
                         <div className="git__content">
                             <b>Pushed to</b>
@@ -49,7 +43,7 @@ class GitFeed extends Component {
                     </div>
                     <div className="git__item">
                         <div className="git__icon">
-                            <img src={gitlabIcon} />
+                            <img src={gitlabIcon} alt="gitlab icon" />
                         </div>
                         <div className="git__content">
                             <b>Pushed to</b>
@@ -60,7 +54,7 @@ class GitFeed extends Component {
                     </div>
                     <div className="git__item">
                         <div className="git__icon">
-                            <img src={githubIcon} />
+                            <img src={githubIcon} alt="github icon" />
                         </div>
                         <div className="git__content">
                             <b>Pushed to</b>
@@ -71,7 +65,7 @@ class GitFeed extends Component {
                     </div>
                     <div className="git__item">
                         <div className="git__icon">
-                            <img src={gitlabIcon} />
+                            <img src={gitlabIcon} alt="gitlab icon" />
                         </div>
                         <div className="git__content">
                             <b>Pushed to</b>

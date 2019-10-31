@@ -4,10 +4,6 @@ import Bonsai from '../assets/images/bonsai.png';
 import Droplet from '../assets/icons/icon-drop.svg';
 
 class Plant extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { value } = this.props;
 
@@ -16,12 +12,12 @@ class Plant extends Component {
                 <Card title="Ficus ginseng" info="Test" >
                     <div className="plant">
                         <div className="plant__value">
-                            <img src={Droplet} />
+                            <img src={Droplet} alt="droplet icon" />
                             <span>{value}%</span>
                         </div>
                     </div>
                 </Card>
-                <img className="plant__image" src={Bonsai} />
+                <img className="plant__image" src={Bonsai} alt="bonsai tree" />
             </React.Fragment>
         )
     }
