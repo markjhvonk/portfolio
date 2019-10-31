@@ -4,8 +4,20 @@ import Bonsai from '../assets/images/bonsai.png';
 import Droplet from '../assets/icons/icon-drop.svg';
 
 class Plant extends Component {
+
+    calcValue(reading) {
+        const minReading = 250;
+        const maxReading = 800;
+        const percentage = Math.abs(Math.round(((reading-minReading)/(maxReading-minReading))*100) - 100);
+
+        return percentage;
+    }
+
     render() {
-        const { value } = this.props;
+        const { data } = this.props;
+
+        const reading = data.length > 0 ? this.calcValue(data[0][0].value) : null;
+        const timestamp = data.length > 0 ? data[0][0].timestamp : null;
 
         return (
             <React.Fragment>
@@ -13,8 +25,9 @@ class Plant extends Component {
                     <div className="plant">
                         <div className="plant__value">
                             <img src={Droplet} alt="droplet icon" />
-                            <span>{value}%</span>
+                            <span>{Math.round(reading)}%</span>
                         </div>
+                        <div className="plant__date">Last updated:<br/>{timestamp}</div>
                     </div>
                 </Card>
                 <img className="plant__image" src={Bonsai} alt="bonsai tree" />

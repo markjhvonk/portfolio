@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../redux/actions/weather';
+import { fetchGithub } from '../redux/actions/github';
+import { fetchPlant } from '../redux/actions/plant';
 import Menu from '../components/Menu';
 import Grid from '../components/Grid';
 import TopBar from '../components/TopBar';
@@ -16,20 +18,23 @@ import Weather from '../components/Weather';
 class Default extends Component {
 
     componentDidMount() {
-        this.fetchWeatherAction();
+        this.fetchData();
     }
 
-    fetchWeatherAction = () => {
+    fetchData = () => {
         this.props.fetchWeather('Rotterdam');
+        this.props.fetchGithub();
+        this.props.fetchPlant();
     }
 
     render() {
+        const { weather, plant } = this.props;
 
         return (
             <div className="main">
                 <Menu />
                 <TopBar>
-                    <Weather forecast={this.props.weather} />
+                    <Weather forecast={weather} />
                 </TopBar>
                 <Grid
                     sectionA={
@@ -45,7 +50,7 @@ class Default extends Component {
                     sectionC={<GitFeed />}
                     sectionD={
                         <WorkContainer title="Work" />}
-                    sectionE={<Plant value={80} />}
+                    sectionE={<Plant data={plant} />}
                     sectionF={
                         <Card title="Crawler - Most popular JavaScript framework" info="Test">
                             <ComingSoon text="Coming Soon" subText="(Side Project)" />
@@ -57,11 +62,15 @@ class Default extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchWeather }, dispatch);
+    return bindActionCreators({
+        fetchWeather,
+        fetchGithub,
+        fetchPlant
+    }, dispatch);
 }
 
-function mapStateToProps({ weather }) {
-    return { weather };
+function mapStateToProps({ weather, github, plant }) {
+    return { weather, github, plant };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Default);
