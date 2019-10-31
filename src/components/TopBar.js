@@ -9,7 +9,9 @@ class TopBar extends Component {
 
         return (
             <div className="top-bar">
-                <div className="top-bar__content">Test</div>
+                <div className="top-bar__content">
+                    {this.props.children}
+                </div>
             </div>
         )
     }

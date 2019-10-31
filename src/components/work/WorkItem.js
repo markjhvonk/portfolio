@@ -9,7 +9,7 @@ class WorkItem extends Component {
         const { title, snippet, image } = this.props;
 
         return (
-            <div className="work-item">
+            <div className="work-item" onClick={this.props.onClick}>
                 <div className="work-item__container">
                     <div className="work-item__image">
                         <img src={image} />
