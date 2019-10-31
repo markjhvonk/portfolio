@@ -1,18 +1,17 @@
 .weather {
     display: flex;
     justify-content: space-between;
-    width: 250px;
 
     &__content {
         text-align: right;
+        margin-right: 25px;
     }
 
     &__icon {
         flex-shrink: 0;
         width: 50px;
-        // height: 100%;
+        
         img{
-            // height: 100%;
             width: 100%;
         }
     }

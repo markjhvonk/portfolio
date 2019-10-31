@@ -7,7 +7,7 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 const URL = WEATHER_URL + `?appid=${WEATHER_API_KEY}`;
 
 export function fetchWeather(city) {
-    const url = URL + `&q=${city},nl`;
+    const url = URL + `&q=${city},nl&units=metric`;
     const request = axios.get(url);
 
     return {
