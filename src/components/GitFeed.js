@@ -25,7 +25,6 @@ class GitFeed extends Component {
                 </div>;
             feed.push(feedItem)
         });
-        console.log(github)
         return feed;
     }
 

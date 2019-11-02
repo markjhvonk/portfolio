@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     position: fixed;
-    z-index: 100;
+    z-index: 400;
     width: $menu-width;
     height: 100vh;
     background-color: $color-black-light;
@@ -19,5 +19,23 @@
         height: 45px;
         margin: 35px 0;
         cursor: pointer;
+    }
+
+    &__popup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        left: $menu-width;
+        height: 100vh;
+        z-index: 300;
+        background-color: $color-black-light;
+
+        &-content {
+            width: 80%;
+            height: 90%;
+        }
     }
 }
