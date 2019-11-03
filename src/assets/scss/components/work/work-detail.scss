@@ -61,6 +61,13 @@
         @media (max-width: $screen-small) {
             height: 40%;
         }
+
+        & > div, 
+        .carousel, 
+        .slider-wrapper, 
+        .slider {
+            height: 100%;
+        }
     }
 
     &__slider {
