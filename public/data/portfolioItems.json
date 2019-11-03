@@ -1,14 +1,13 @@
 [
     {
         "title": "Clickbait classifier",
-        "text": "For this project I am working with the ACED organisation to tackle clickbait on Dutch news websites.\n\nACED has collected a large amount of news articles from most popular Dutch news sites, which we can use to determine what is clickbait, and what is not clickbait.\n\nWe hope to do this by making a small swiper game where people can decide what is clickbait and what is not. With these results we can make machine learning models which can automatically determine if a news article is clickbait or not.\n\nEventually the goal is to implement this model into a browser extension that can warn users of clickbait and generate more awareness around the subject.",
+        "text": "For this project I am working with the ACED organisation to tackle clickbait on local Dutch news websites.\n\nACED has collected a large amount of news articles from most popular Dutch news sites, which we can use to determine what is clickbait, and what is not clickbait.\n\nWe hope to do this by making a small swiper game where people can decide what is clickbait and what is not. With these results we can make machine learning models which can automatically determine if a news article is clickbait or not.\n\nEventually the goal is to implement this model into a browser extension that can warn users of clickbait and generate more awareness around the subject.",
         "snippet": "Classifier to tackle clickbait on news websites.",
         "skills": "Data engineering, Pyhton, Flask, MongoDB, React, Javascript",
         "git": "https://github.com/En-ju-neer-s",
-        "coverImage": "https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "coverImage": "./portfolio-images/clickbait-classifier/classifier-1.jpg",
         "images": [
-            "https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-            "https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+            "./portfolio-images/clickbait-classifier/classifier-1.jpg"
         ]
     },
     {
