@@ -7,20 +7,13 @@ class GitFeed extends Component {
 
     selectFeed(github) {
         let feed = [];
-        console.log(github);
 
         github.forEach(item => {
-            console.log(item.payload.commits)
             let url = (item.payload.commits !== undefined) ? item.payload.commits[0].url : item.repo.url;
 
-            // if (item.payload.commits !== undefined) {
-            //     console.log(item.payload.commits[0])
-            // }
-            console.log(url)
             if (url) {
                 url = url.replace("api.", "");
                 url = url.replace("/repos", "");
-                console.log(url)
             }
 
             const feedItem =
@@ -41,6 +34,7 @@ class GitFeed extends Component {
                 </a>;
             feed.push(feedItem)
         });
+
         return feed;
     }
 
