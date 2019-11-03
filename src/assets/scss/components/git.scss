@@ -9,7 +9,7 @@
     padding-right: 17px;
     
     &__item {
-        width: 100%;
+        width: 105%;
         height: 75px;
         display: flex;
         align-content: center;
@@ -39,6 +39,7 @@
         font-size: 13px;
         padding-right: 10px;
         overflow: hidden;
+        color: $color-gray-light;
 
         span, b {
             width: 100%;
