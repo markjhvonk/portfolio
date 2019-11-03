@@ -57,10 +57,11 @@ class ApiTest extends Component {
                                     <h2>Let's get in touch!</h2>
                                     <p>You can find me on the following channels:</p>
                                     <ul>
-                                        <li>LinkedIn</li>
-                                        <li>GitHub</li>
-                                        <li>GitLab</li>
-                                        <li>CodePen</li>
+                                        <li><a href="https://www.linkedin.com/in/mark-vonk-569745a7/" target="_blank">LinkedIn</a></li>
+                                        <li><a href="https://github.com/markjhvonk" target="_blank">GitHub</a></li>
+                                        <li><a href="https://gitlab.com/markjhvonk" target="_blank">GitLab</a></li>
+                                        <li><a href="https://codepen.io/markjhvonk" target="_blank">CodePen</a></li>
+                                        <li><a href="mailto:markjhvonk@gmail.com">Email</a></li>
                                     </ul>
                                 </React.Fragment>
                             }
@@ -68,6 +69,9 @@ class ApiTest extends Component {
                                 <React.Fragment>
                                     <h2>About me</h2>
                                     <p>Hey my name is Mark and I'm a 23 year old, 4th year, CMGT student at the Hogeschool Rotterdam.</p>
+                                    <p>My current passions include, but are not limited to;<br />Front-end, Javascript, API's, big data, applied solutions, Python, Machine Learning & new technologies.</p>
+                                    <p>Some of my hobbies are;<br />Gaming, skateboarding, board/table-top games, 3d-printing, Arduino, Raspberry Pi & more programming!</p>
+                                    <p>Interested in more? <a href="mailto:markjhvonk@gmail.com">Get in touch!</a></p>
                                 </React.Fragment>
                             }
                         </div>
