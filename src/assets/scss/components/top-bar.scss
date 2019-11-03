@@ -8,6 +8,12 @@
     height: 75px;
     padding-left: $menu-width;
 
+    @media (max-width: $screen-small) {
+        position: relative;
+        padding-left: 0;
+        padding-right: 25px;
+    }
+
     &__content {
         display: flex;
         flex-direction: row-reverse;

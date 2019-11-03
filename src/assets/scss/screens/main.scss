@@ -1,6 +1,13 @@
 .main {
+    @media (max-width: $screen-small) {
+        overflow-x: hidden;
+    }
 
     &__title{
         margin-top: 25px;
+
+        @media (max-width: $screen-small) {
+            margin-top: 100px;
+        }
     }
 }

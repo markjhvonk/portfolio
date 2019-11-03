@@ -11,6 +11,12 @@
     margin-bottom: 30px;
     flex-shrink: 0;
 
+    @media (max-width: $screen-small) {
+        width: 90%;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
     &:hover {
         #{$self}__container {
             height: 85%;

@@ -22,7 +22,7 @@ class Default extends Component {
     }
 
     fetchData = () => {
-        this.props.fetchWeather('Rotterdam');
+        this.props.fetchWeather('Maassluis');
         this.props.fetchGithub();
         this.props.fetchPlant();
     }
