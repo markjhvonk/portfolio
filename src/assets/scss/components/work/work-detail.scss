@@ -88,10 +88,43 @@
     }
 
     &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding: 50px 75px;
+        overflow: hidden;
+        height: 100%;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $screen-medium) {
+            padding: 50px 25px 25px;
+        }
 
         @media (max-width: $screen-small) {
-            padding: 50px 25px;
+            padding: 50px 25px 25px;
         }
+    }
+
+    &__text {
+        max-height: 500px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        box-sizing: content-box; 
+        padding-right: 17px;
+
+        @media (max-width: $screen-medium) {
+            max-height: 400px;
+        }
+
+        @media (max-width: $screen-small) {
+            max-height: 300px;
+        }
+    }
+
+    &__skills {
+        margin-top: 15px;
     }
 }

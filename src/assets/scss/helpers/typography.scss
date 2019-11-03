@@ -1,4 +1,4 @@
-body, p, span, h1, h2, h3 {
+body, p, span, h1, h2, h3, pre {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     color: $color-gray-light;
@@ -10,4 +10,8 @@ h1 {
 
 h2 {
     font-size: 24px;
+}
+
+p, pre {
+    font-size: 18px;
 }

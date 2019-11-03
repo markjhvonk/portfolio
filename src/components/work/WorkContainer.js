@@ -14,52 +14,45 @@ class WorkContainer extends Component {
         });
     }
 
-    toggleModal(title, text, images) {
+    toggleModal(title, text, images, skills) {
         const { modalOpen } = this.state;
         this.setState({
             modalOpen: !modalOpen,
             modalTitle: title,
             modalText: text,
-            modalImages: images
+            modalImages: images,
+            modalSkills: skills
         });
     }
 
     render() {
-        const { modalOpen, modalText, modalTitle, modalImages } = this.state;
-        const { title } = this.props;
+        const { modalOpen, modalText, modalTitle, modalImages, modalSkills } = this.state;
+        const { title, portfolio } = this.props;
+        console.log(portfolio)
 
         return (
             <React.Fragment>
-                {modalOpen&&
-                    <WorkDetail 
-                        toggleModal={() => {this.toggleModal()}} 
-                        title={modalTitle} 
-                        text={modalText} 
-                        images={modalImages}/>
+                {modalOpen &&
+                    <WorkDetail
+                        toggleModal={() => { this.toggleModal() }}
+                        title={modalTitle}
+                        text={modalText}
+                        images={modalImages}
+                        skills={modalSkills} />
                 }
                 <div className="work-container">
                     <h2 className="work-container__title">{title}</h2>
                     <div className="work-container__items">
-                        <WorkItem
-                            onClick={() => {this.toggleModal("Rocto (LoCoSoRoP)", "A low cost, social robot to give handicapped children more attention", "https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")}}
-                            title="Rocto (LoCoSoRoP)"
-                            snippet="A low cost, social robot to give handicapped children more attention"
-                            image="https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
-                        <WorkItem
-                            onClick={() => {this.toggleModal("Rocto1 (LoCoSoRoP)", "A low cost, social robot to give handicapped children more attention", "https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")}}
-                            title="Rocto1 (LoCoSoRoP)"
-                            snippet="A low cost, social robot to give handicapped children more attention"
-                            image="https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
-                        <WorkItem
-                            onClick={() => {this.toggleModal("Rocto2 (LoCoSoRoP)", "A low cost, social robot to give handicapped children more attention", "https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")}}
-                            title="Rocto2 (LoCoSoRoP)"
-                            snippet="A low cost, social robot to give handicapped children more attention"
-                            image="https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
-                        <WorkItem
-                            onClick={() => {this.toggleModal("Rocto3 (LoCoSoRoP)", "A low cost, social robot to give handicapped children more attention", "https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")}}
-                            title="Rocto3 (LoCoSoRoP)"
-                            snippet="A low cost, social robot to give handicapped children more attention"
-                            image="https://images.unsplash.com/photo-1549145159-2f1242ce0975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
+                        {portfolio !== undefined &&
+                            portfolio.map((item)=>{
+                                return(<WorkItem
+                                    onClick={() => { this.toggleModal(item.title, item.text, item.images, item.skills) }}
+                                    title={item.title}
+                                    snippet={item.snippet}
+                                    coverImage={item.coverImage}
+                                    images={item.images} />)
+                            })
+                        }
                         <div className="work-container__spacer"></div>
                     </div>
                 </div>

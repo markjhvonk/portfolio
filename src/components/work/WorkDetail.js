@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 class WorkDetail extends Component {
     render() {
-        const { title, text, images, toggleModal } = this.props;
+        const { title, text, images, toggleModal, skills } = this.props;
 
         return (
             <div className="work-detail__container">
@@ -17,28 +17,35 @@ class WorkDetail extends Component {
                             showIndicators={true}
                             showStatus={false}
                             autoPlay={true}
-                            interval={2000}
+                            interval={3000}
                             infiniteLoop={true}
                             dynamicHeight={false}>
-                            <div className="work-detail__slide">
-                                <img src={images} alt="slider" />
-                            </div>
-                            <div className="work-detail__slide">
-                                <img src={images} alt="slider" />
-                            </div>
+                            {images.map((image) => {
+                                return (
+                                    <div className="work-detail__slide">
+                                        <img src={image} alt="slider" />
+                                    </div>
+                                );
+                            })}
                         </Carousel>
                     </div>
                     <div className="work-detail__content">
                         <div className="work-detail__close-btn" onClick={toggleModal}>
                             <img src={XIcon} alt="close icon" />
                         </div>
-                        <h2>
-                            {title}
-                        </h2>
-                        <div className="work-detail__text">
-                            <p>
-                                {text}
-                            </p>
+                        <div className="work-detail__content-body">
+                            <h2>
+                                {title}
+                            </h2>
+                            <div className="work-detail__text">
+                                <pre>
+                                    {text}
+                                </pre>
+                            </div>
+                        </div>
+                        <div className="work-detail__skills">
+                            <h3>Skills used:</h3>
+                            {skills}
                         </div>
                     </div>
                 </div>

@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 class WorkItem extends Component {
     render() {
-        const { title, snippet, image } = this.props;
+        const { title, snippet, coverImage } = this.props;
 
         return (
             <div className="work-item" onClick={this.props.onClick}>
                 <div className="work-item__container">
                     <div className="work-item__image">
-                        <img src={image} alt="work item" />
+                        <img src={coverImage} alt="work item" />
                     </div>
                     <div className="work-item__content">
                         <h2>{title}</h2>

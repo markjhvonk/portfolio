@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../redux/actions/weather';
 import { fetchGithub } from '../redux/actions/github';
 import { fetchPlant } from '../redux/actions/plant';
+import { fetchPortfolio } from '../redux/actions/portfolio';
 import Menu from '../components/Menu';
 import Grid from '../components/Grid';
 import TopBar from '../components/TopBar';
@@ -25,10 +26,11 @@ class Default extends Component {
         this.props.fetchWeather('Maassluis');
         this.props.fetchGithub();
         this.props.fetchPlant();
+        this.props.fetchPortfolio();
     }
 
     render() {
-        const { weather, plant, github } = this.props;
+        const { weather, plant, github, portfolio } = this.props;
 
         return (
             <div className="main">
@@ -48,8 +50,7 @@ class Default extends Component {
                     }
                     sectionB={<Steps />}
                     sectionC={<GitFeed githubData={github} />}
-                    sectionD={
-                        <WorkContainer title="Work" />}
+                    sectionD={<WorkContainer portfolio={portfolio[0]} title="Work" />}
                     sectionE={<Plant data={plant} />}
                     sectionF={
                         <Card title="Crawler - Most popular JavaScript framework" info="Test">
@@ -65,12 +66,13 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({
         fetchWeather,
         fetchGithub,
-        fetchPlant
+        fetchPlant,
+        fetchPortfolio
     }, dispatch);
 }
 
-function mapStateToProps({ weather, github, plant }) {
-    return { weather, github, plant };
+function mapStateToProps({ weather, github, plant, portfolio }) {
+    return { weather, github, plant, portfolio };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Default);
