@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 class WorkDetail extends Component {
     render() {
-        const { title, text, images, toggleModal, skills } = this.props;
+        const { title, text, images, toggleModal, skills, git } = this.props;
 
         return (
             <div className="work-detail__container">
@@ -43,13 +43,20 @@ class WorkDetail extends Component {
                                 </pre>
                             </div>
                         </div>
-                        <div className="work-detail__skills">
-                            <h3>Skills used:</h3>
-                            {skills}
+                        <div className="work-detail__content-footer">
+                            {git &&
+                                <div className="word-detail__code">
+                                    <a href={git}>Check out the code.</a>
+                                </div>
+                            }
+                            <div className="work-detail__skills">
+                                <h3>Skills used:</h3>
+                                {skills}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }

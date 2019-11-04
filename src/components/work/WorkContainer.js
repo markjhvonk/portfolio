@@ -14,19 +14,20 @@ class WorkContainer extends Component {
         });
     }
 
-    toggleModal(title, text, images, skills) {
+    toggleModal(title, text, images, skills, git) {
         const { modalOpen } = this.state;
         this.setState({
             modalOpen: !modalOpen,
             modalTitle: title,
             modalText: text,
             modalImages: images,
-            modalSkills: skills
+            modalSkills: skills,
+            modalGit: git
         });
     }
 
     render() {
-        const { modalOpen, modalText, modalTitle, modalImages, modalSkills } = this.state;
+        const { modalOpen, modalText, modalTitle, modalImages, modalSkills, modalGit } = this.state;
         const { title, portfolio } = this.props;
 
         return (
@@ -37,15 +38,17 @@ class WorkContainer extends Component {
                         title={modalTitle}
                         text={modalText}
                         images={modalImages}
-                        skills={modalSkills} />
+                        skills={modalSkills}
+                        git={modalGit} />
                 }
                 <div className="work-container">
                     <h2 className="work-container__title">{title}</h2>
                     <div className="work-container__items">
                         {portfolio !== undefined &&
-                            portfolio.map((item) => {
+                            portfolio.map((item, index) => {
                                 return (<WorkItem
-                                    onClick={() => { this.toggleModal(item.title, item.text, item.images, item.skills) }}
+                                    key={index}
+                                    onClick={() => { this.toggleModal(item.title, item.text, item.images, item.skills, item.git) }}
                                     title={item.title}
                                     snippet={item.snippet}
                                     coverImage={item.coverImage}
