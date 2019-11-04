@@ -42,7 +42,7 @@ class GitFeed extends Component {
         const { githubData } = this.props;
 
         return (
-            <Card title="Git feed" info="Test">
+            <Card title="Git feed">
                 <div className="git">
                     {githubData.length > 0 &&
                         this.selectFeed(githubData[0])

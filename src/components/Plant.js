@@ -8,7 +8,7 @@ class Plant extends Component {
     calcValue(reading) {
         const minReading = 250;
         const maxReading = 800;
-        const percentage = Math.abs(Math.round(((reading-minReading)/(maxReading-minReading))*100) - 100);
+        const percentage = Math.abs(Math.round(((reading - minReading) / (maxReading - minReading)) * 100) - 100);
 
         return percentage;
     }
@@ -21,13 +21,13 @@ class Plant extends Component {
 
         return (
             <React.Fragment>
-                <Card title="Ficus ginseng" info="Test" >
+                <Card title="Ficus ginseng">
                     <div className="plant">
                         <div className="plant__value">
                             <img src={Droplet} alt="droplet icon" />
                             <span>{Math.round(reading)}%</span>
                         </div>
-                        <div className="plant__date">Last updated:<br/>{timestamp}</div>
+                        <div className="plant__date">Last updated:<br />{timestamp}</div>
                     </div>
                 </Card>
                 <img className="plant__image" src={Bonsai} alt="bonsai tree" />

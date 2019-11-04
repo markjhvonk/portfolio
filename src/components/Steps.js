@@ -22,7 +22,7 @@ class Steps extends Component {
         // const timeOfDay = 19;
         if (timeOfDay >= 8) {
             const currentSteps = (timeOfDay - 8) * stepsPerHour;
-            const currentPercent = Math.ceil((currentSteps/currentLimit)*100);
+            const currentPercent = Math.ceil((currentSteps / currentLimit) * 100);
 
             if (currentSteps <= currentLimit) {
                 this.setState({ steps: currentSteps, percent: currentPercent });
@@ -33,9 +33,9 @@ class Steps extends Component {
     }
 
     render() {
-        const {steps, percent} = this.state;
+        const { steps, percent } = this.state;
         return (
-            <Card title="Steps" info="Test">
+            <Card title="Steps">
                 <div className="steps">
                     <h3>Friday</h3>
                     <Circle width={`70%`} height={`100%`} percent={percent} value={steps} />
