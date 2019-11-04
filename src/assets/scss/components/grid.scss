@@ -16,7 +16,7 @@
         grid-template-areas: 
             "A E D"
             "B C D"
-            "F F D";
+            "F F X";
     }
 
     @media (max-width: $screen-medium) {

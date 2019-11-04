@@ -20,7 +20,6 @@ class Grid extends Component {
                     <div className="grid__section-D">{sectionD}</div>
                     <div className="grid__section-E">{sectionE}</div>
                     <div className="grid__section-F">{sectionF}</div>
-                    {/* <div className="grid__section-X"></div> */}
                 </div>
             </div>
         )
