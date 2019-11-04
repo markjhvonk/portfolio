@@ -28,7 +28,6 @@ class WorkContainer extends Component {
     render() {
         const { modalOpen, modalText, modalTitle, modalImages, modalSkills } = this.state;
         const { title, portfolio } = this.props;
-        console.log(portfolio)
 
         return (
             <React.Fragment>
@@ -44,8 +43,8 @@ class WorkContainer extends Component {
                     <h2 className="work-container__title">{title}</h2>
                     <div className="work-container__items">
                         {portfolio !== undefined &&
-                            portfolio.map((item)=>{
-                                return(<WorkItem
+                            portfolio.map((item) => {
+                                return (<WorkItem
                                     onClick={() => { this.toggleModal(item.title, item.text, item.images, item.skills) }}
                                     title={item.title}
                                     snippet={item.snippet}
