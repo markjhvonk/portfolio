@@ -15,11 +15,36 @@ class Steps extends Component {
         this.calcSteps();
     }
 
+    getCurrentDay() {
+        switch (new Date().getDay()) {
+            case 0:
+                return "Sunday";
+                break;
+            case 1:
+                return "Monday";
+                break;
+            case 2:
+                return "Tuesday";
+                break;
+            case 3:
+                return "Wednesday";
+                break;
+            case 4:
+                return "Thursday";
+                break;
+            case 5:
+                return "Friday";
+                break;
+            case 6:
+                return "Saturday";
+        }
+    }
+
     calcSteps() {
         const timeOfDay = new Date().getHours();
         const currentLimit = 8000;
         const stepsPerHour = 670;
-        // const timeOfDay = 19;
+        // const timeOfreturn 19;
         if (timeOfDay >= 8) {
             const currentSteps = (timeOfDay - 8) * stepsPerHour;
             const currentPercent = Math.ceil((currentSteps / currentLimit) * 100);
@@ -37,7 +62,7 @@ class Steps extends Component {
         return (
             <Card title="Steps">
                 <div className="steps">
-                    <h3>Friday</h3>
+                    <h3>{this.getCurrentDay()}</h3>
                     <Circle width={`70%`} height={`100%`} percent={percent} value={steps} />
                 </div>
             </Card>

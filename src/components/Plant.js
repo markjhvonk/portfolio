@@ -10,7 +10,7 @@ class Plant extends Component {
         const maxReading = 800;
         const percentage = Math.abs(Math.round(((reading - minReading) / (maxReading - minReading)) * 100) - 100);
 
-        return percentage;
+        return 100 - percentage;
     }
 
     render() {

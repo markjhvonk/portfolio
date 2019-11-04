@@ -23,4 +23,14 @@
             width: 340px;
         }
     }
+
+    &__logo {
+        align-self: flex-start;
+        margin-right: auto;
+        display: none;
+
+        @media (max-width: $screen-small) {
+            display: block;
+        }
+    }
 }
