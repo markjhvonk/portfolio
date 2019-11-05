@@ -59,7 +59,6 @@ class ApiTest extends Component {
                                     <ul>
                                         <li><a href="https://www.linkedin.com/in/mark-vonk-569745a7/" target="_blank">LinkedIn</a></li>
                                         <li><a href="https://github.com/markjhvonk" target="_blank">GitHub</a></li>
-                                        <li><a href="https://gitlab.com/markjhvonk" target="_blank">GitLab</a></li>
                                         <li><a href="https://codepen.io/markjhvonk" target="_blank">CodePen</a></li>
                                         <li><a href="mailto:markjhvonk@gmail.com">Email</a></li>
                                     </ul>
