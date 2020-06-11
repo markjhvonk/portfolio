@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card';
 import Bonsai from '../assets/images/bonsai.png';
 import Droplet from '../assets/icons/icon-drop.svg';
+import {random} from 'lodash';
 
 class Plant extends Component {
 
@@ -16,8 +17,10 @@ class Plant extends Component {
     render() {
         const { data } = this.props;
 
-        const reading = data.length > 0 ? this.calcValue(data[0][0].value) : null;
-        const timestamp = data.length > 0 ? data[0][0].timestamp : null;
+        const backupDate = new Date();
+
+        const reading = data[0] ? this.calcValue(data[0][0].value) : random(50, 100);
+        const timestamp = data[0] ? data[0][0].timestamp : backupDate.toDateString();
 
         return (
             <React.Fragment>
