@@ -5,7 +5,7 @@ import Main from './screens/Main';
 function App() {
   return (
     <Router>
-      <Route path="/" exact component={Main} />
+      <Route exact path="/portfolio" component={Main} />
     </Router>
   );
 }
