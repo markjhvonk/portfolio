@@ -53,7 +53,7 @@ class Default extends Component {
                     sectionD={<WorkContainer portfolio={portfolio[0]} title="Work" />}
                     sectionE={<Plant data={plant} />}
                     sectionF={
-                        <Card title="Crawler - Most popular JavaScript framework" info="Test">
+                        <Card title="Crawler" info="Test">
                             <ComingSoon text="Coming Soon" subText="(Side Project)" />
                         </Card>}
                 />
