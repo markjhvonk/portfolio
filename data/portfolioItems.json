@@ -1,12 +1,24 @@
 [
     {
+        "title": "Officebooking",
+        "text": "For my current occupation at Officebooking I am helping develop their web-app and admin panels for the end users. The web-app consits of various methods for the end user to book a workplace, whereas the admin panel gives the admins valuable data and insight into the user behaviour and location occupany.",
+        "snippet": "Officebooking webapps and admin development.",
+        "skills": "React, AngularJS, Javascript, Ruby on Rails",
+        "coverImage": "./portfolio-images/officebooking/officebooking-cover.jpg",
+        "images": [
+            "./portfolio-images/officebooking/officebooking-cover.jpg"
+        ]
+    },
+    {
         "title": "Log data visualiser",
-        "text": "For my graduation project at Lely Technologies I got the oportunity to help improve one of their upcomming robots.\n\nDuring my time here I created a web application/dashboard where the developers of the robot can upload and analyse the log data, in a user friendly way.\n\nUnfortunately this project is strictly confidential until the robot itself has been announced.",
-        "snippet": "Log data visualiser for Lely robot.",
+        "text": "For my graduation project at Lely Technologies I got the oportunity to help improve their upcomming Lely Exos.\n\nDuring my time here I created a web application/dashboard where the developers of the Lely Exos can upload and analyse the log data, in a user friendly way.\n\nUnfortunately this project is strictly confidential for the time being.",
+        "snippet": "Log data visualiser for Lely Exos.",
         "skills": "React, Javascript, MongoDB, NodeJS, REST API",
         "coverImage": "./portfolio-images/lely/Lely banner.jpg",
         "images": [
-            "./portfolio-images/lely/Lely banner.jpg"
+            "./portfolio-images/lely/Lely banner.jpg",
+            "./portfolio-images/lely/lely-1.jpg",
+            "./portfolio-images/lely/lely-2.png"
         ]
     },
     {
