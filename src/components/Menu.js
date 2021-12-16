@@ -67,7 +67,7 @@ class ApiTest extends Component {
                             {about &&
                                 <React.Fragment>
                                     <h2>About me</h2>
-                                    <p>Hey my name is Mark and I'm a 23 year old, 4th year, CMGT student at the Hogeschool Rotterdam.</p>
+                                    <p>Hey my name is Mark and I'm a 25 year old, from The Netherlands.</p>
                                     <p>My current passions include, but are not limited to;<br />Front-end, Javascript, API's, big data, applied solutions, Python, Machine Learning & new technologies.</p>
                                     <p>Some of my hobbies are;<br />Gaming, skateboarding, board/table-top games, 3d-printing, Arduino, Raspberry Pi & more programming!</p>
                                     <p>Interested in more?<br /><a href="mailto:markjhvonk@gmail.com">Get in touch!</a></p>
